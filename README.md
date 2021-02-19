@@ -32,7 +32,9 @@ Crie uma tela principal com um menu para cada área contendo o CRUD de cada tabe
 ### Requisitos
 - Usar Laravel (Última versão estável);
 - Usar banco de dados Mysql;
+- Usar migrations para criação das tabelas quando necessário, ou exportar o arquivo SQL com a estrutura criada.
 - Usar o github ou gitlab;
+- Explicar de forma breve como instalar e rodar o projeto.
 - No demais fique a vontade para utilizar todos os seus conhecimentos e técnicas possíveis.
 
 ### Para participar basta...
