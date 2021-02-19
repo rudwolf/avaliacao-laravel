@@ -1,6 +1,3 @@
-<p align="center"><img src="http://autogestor.net/uploads/1568398574.svg"></p>
-
-
 # Teste prático - Laravel
 
 Esse teste prático visa avaliar os conhecimentos do candidato a vaga de programador PHP Laravel.
@@ -14,41 +11,53 @@ Esse teste prático visa avaliar os conhecimentos do candidato a vaga de program
     - Responsabilidade na tomada de decisões.
 
 # Fique tranquilo
-  - Todo e qualquer código desenvolvido nesse teste não será utilizado em quaisquer outros softwares nem comercializados pela AutoGestor.
+  - Todo e qualquer código desenvolvido nesse teste não será utilizado em quaisquer outros softwares nem comercializados pela empresa.
   - O propósito deste teste é apenas avaliar o conhecimento em programaçao do candidato.
 
 # Vamos lá! A aplicação é...
 Criem uma aplicação utilizando Laravel, MySql e quaisquer outras tecnologias que julgar benéficas ao projeto.
 A aplicação deve prover um sistema de Login e nível de acesso simples.
-O administrador do sistema deverá Manter permissões e Manter usuários, cada usuário com uma ou mais permissões para a execução das seguintes tarefas:
- - Manter produtos;
- - Manter categorias;
- - Manter marcas.
+O administrador do sistema deverá Manter(Guardar em banco de dados) permissões e Manter(Guardar em banco de dados) usuários, cada usuário com uma ou mais permissões para a execução das seguintes tarefas:
+ - Manter(Inserir/Editar/Exibir/Deletar) produtos - A tabela deve conter: id do produto(chave primaria), nome do produto (string), estoque (inteiro), preço(float), categoria a qual pertence(id de tabela externa), marca a qual pertence(id de tabela externa);
+ - Manter(Inserir/Editar/Exibir/Deletar) categorias - A tabela deve conter: id da categoria(chave primaria) e nome da categoria(string);
+ - Manter(Inserir/Editar/Exibir/Deletar) marcas - A tabela deve conter: id da marca(chave primaria) e nome da marca(string).
 	
-Não necessita desenvolver os CRUDs referentes às tarefas acima.
-Crie apenas uma tela para cada uma das tarefas contendo apenas o título a fim de testarmos se o usuário pode acessa-las ou não;
-- O administrador não tem acesso às tarefas relacionadas a manter produtos, categorias e marcas;
-- Apenas os CRUDs de usuário e permissões são necessários. 
+Crie uma tela principal com um menu para cada área contendo o CRUD de cada tabela;
+- Não é necessário CRUDs de usuário porém os usuários comuns devem apenas poder consultar (exibir os produtos) e apenas os administradores podem criar/editar e excluir usuários ou quaisquer outros itens.
 
 ### Sobre os usuários
-- Administrador;
-- Comum
+- Administrador (Acesso total);
+- Comum (Apenas exibir/consultar produtos)
 
 ### Requisitos
 - Usar Laravel (Última versão estável);
 - Usar banco de dados Mysql;
-- Usar o github ou bitbucket;
+- Usar o github ou gitlab;
 - No demais fique a vontade para utilizar todos os seus conhecimentos e técnicas possíveis.
 
 ### Para participar basta...
 - Construir a aplicação solicitada;
-- Enviar o link do projeto no github ou bitbucket para o e-mail: autogestor.net@gmail.com;
-- Juntamente com o link acima mencionado nos envie também o seu curriculum atualizado;
-- Informar pretenção salarial;
-- Informe também sua disponibilidade para ínicio das atividades caso venha a fazer parte de nossa equipe.
-
-# Caso precise falar conosco
-- Email: autogestor.net@gmail.com
-- Fone: [41] 3524-8689 
+- Enviar para nós o link do projeto no github ou bitbucket;
 
 Fique a vontade para entrar em contato conosco se você tenha alguma dúvida ou assim que terminar a aplicação.
+
+# Encontre o Erro
+
+O código abaixo feito em PHP e Laravel contém um erro, você deve encontrá-lo e dizer por que o código abaixo não irá funcionar.
+
+    <?php
+    use Psr\Log\LoggerService; // Esta é a classe do serviço de Log
+
+    class Worker {
+      protected $logger;
+     
+      public function __construct(Psr\Log\LoggerInterface $logger) {
+        $this->logger = $logger;
+      }
+      public function log($error) {
+        $this->logger->service = new ServiceLog(); // Criando instância do serviço de Log...
+        $this->logger->service->log($error);
+      }
+    } ?>
+    
+Identifique em qual linha se encontra o erro. Onde é iniciado o código `<?php` é a linha 1.
